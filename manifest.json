@@ -9,11 +9,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.panopto.com/*/Viewer*"],
+      "matches": ["*://*.panopto.com/*/Viewer*", "*://*.panopto.eu/*"],
       "js": ["pageDOMParser.js"]
     }
   ],
-  "page_action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon.png",
@@ -27,6 +27,11 @@
     "32": "images/icon.png",
     "48": "images/icon.png",
     "128": "images/icon.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "contact@leonardobishop.com"
+    }
   },
   "manifest_version": 2
 }
