@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <style>
   body {
-    margin: 3px;
+    margin: 0px;
     width: 150px;
-    height: 108px;
+    height: 80px;
+    font-family: sans-serif;
   }
   #title {
     text-align: center;
@@ -12,6 +13,7 @@
     margin-bottom: 5px;
   }
   #input {
+    margin: 5px;
     width: 150px;
   }
   button {
@@ -20,10 +22,9 @@
     outline: none;
     border-width: 0;
     border-radius: 2px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    /* box-shadow: 0 1px 4px rgba(0, 0, 0, .6); */
     background-color: #f5f5f5;
     color: #000000;
-
     transition: background-color .3s;
   }
   #speedValField {
@@ -31,13 +32,16 @@
     float:left;
   }
   #downloads {
+    margin: 0 auto;
     position: absolute;
   }
   #donateUrl {
+    display: none;
     position: absolute;
     bottom: 0;
   }
   #husky {
+    display: none;
     width: 50px;
     height: 50px;
     position:absolute;
@@ -47,7 +51,7 @@
 </style>
 <html>
   <div id="title">
-      Fast Panopto v1.22
+      <span style="padding: 3px;">Fast Panopto</span>
   </div>
   <body>
     <div id="input">
@@ -67,6 +71,7 @@
         -->
       </div>
     </div>
+    <br>
     <div id=donateUrl>
       <form action="https://www.paypal.com/cgi-bin/webscr" target="_blank" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick" />
